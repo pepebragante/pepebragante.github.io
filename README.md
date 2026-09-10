@@ -20,3 +20,14 @@ Nathan → Main Page (Mapa)
 Pedro → Info Page (Informação do projeto)
 <Br>
 Nathan → Settings Page (Configurações)
+# Link da Landing page
+Infelismente, pelo uso de jsx, você mesmo terá que começar um codespace, dapois de seguir as instruçoes saíra um link mais ou menos assim: https://<nome-do-codespace>-<hash>.github.dev
+# Instruções
+
+cd AppReact
+<Br>
+npm i
+<Br>
+npm run dev
+<Br>
+seguir localhost:5173
