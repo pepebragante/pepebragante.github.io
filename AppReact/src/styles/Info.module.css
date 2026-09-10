@@ -1,0 +1,93 @@
+.container {
+  width: 100%;
+  height: 100dvh;
+  box-sizing: border-box; 
+  padding-top: 25px; 
+  background-color: #f5f7fa;
+  border: 10px solid red;
+  box-shadow: inset 0 0 0 15px orange;
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.title {
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.container2 {
+  width: calc(100% - 30px);
+  max-width: 500px;
+  height: 50vh;
+  box-sizing: border-box; 
+  padding: 15px;
+  background-color: #bfbfbf;
+  position: relative;
+  overflow-y: auto;
+  text-align: center;
+  border: 5px solid black;
+  border-radius: 8px;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;            
+  align-items: center;
+  width: 100%;
+  max-width: 300px;     
+  margin-top: 20px;
+}
+
+.containerVoltar {
+  position: absolute;
+  top: 25px;
+  left: 45px;
+  z-index: 1000;
+}
+
+.buttonVoltar {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  zoom: 0.9;
+  outline: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.buttonVoltar img {
+  width: 28px;
+  height: 28px;
+  display: block;
+  transition: filter 0.2s ease;
+}
+
+@media (max-width: 600px) {
+  .containerVoltar {
+    left: 25px;
+    top: 20px;
+  }
+.title {
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    width: 100%;
+    padding-left: 100px;
+    padding-top: 20px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    min-height: 40px;      
+    box-sizing: border-box;
+  }
+}

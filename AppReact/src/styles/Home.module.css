@@ -1,0 +1,503 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+
+  box-sizing: border-box;
+
+  padding-top: 25px;
+  padding-bottom: 70px;
+
+  background-color: #f5f7fa;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  overflow: visible;
+}
+/*treco creators */
+.creators {
+  position: fixed;
+
+  bottom: 15px;
+  left: 0;
+  width: 100%;
+
+  text-align: center;
+
+  color: #333;
+
+  font-family: "DaysOne", sans-serif;
+  font-size: 0.8rem;
+
+  z-index: 10000;
+}
+
+/* =========================
+   MOLDURA FIXA
+   ========================= */
+
+.container::before {
+  content: "";
+
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  border: 10px solid red;
+
+  box-shadow: inset 0 0 0 15px orange;
+
+  pointer-events: none;
+
+  z-index: 9999;
+}
+
+
+/* =========================
+   LOGO PEQUENO
+   ========================= */
+
+.smallLogo {
+  width: 50px;
+  height: 50px;
+
+  object-fit: contain;
+  display: block;
+
+  position: absolute;
+
+  top: 20px;
+  left: 20px;
+
+  z-index: 2;
+}
+
+
+/* =========================
+   ÁREA GERAL
+   ========================= */
+
+.logos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+}
+
+
+/* =========================
+   TÍTULO
+   ========================= */
+
+.title {
+  color: #333;
+
+  margin: 0;
+  margin-bottom: 5px;
+
+  text-align: center;
+
+  font-size: 2.5rem;
+
+  font-family: "DaysOne", sans-serif;
+}
+
+
+/* =========================
+   SUBTÍTULO
+   ========================= */
+
+.title2 {
+  color: #333;
+
+  margin: 0;
+  margin-bottom: 15px;
+
+  text-align: center;
+
+  font-size: 1rem;
+
+  font-family: "DaysOne", sans-serif;
+}
+
+
+/* =========================
+   LOGO + CONTEÚDOS
+   ========================= */
+
+.logoArea {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  width: 98%;
+
+  margin-top: -40px;
+
+  position: relative;
+  z-index: 1;
+}
+
+
+/* =========================
+   LOGO PRINCIPAL
+   ========================= */
+
+.mainLogo {
+  width: 200px;
+  height: 200px;
+
+  object-fit: contain;
+  display: block;
+
+  flex-shrink: 0;
+
+  transform: translateY(-100px);
+}
+
+
+/* =========================
+   CONTEÚDOS
+   ========================= */
+
+.twodivsgeneral {
+  width: 350px;
+
+  height: auto;
+
+  text-align: justify;
+
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: center;
+
+  font-family: "DaysOne", sans-serif;
+
+  margin-right: 40px;
+  margin-left: 40px;
+  margin-top: 20px;
+
+  line-height: 1.5;
+
+  background-color: #f5f7fa;
+
+  /* Moldura dupla */
+  border: 3px solid #333;
+
+  box-shadow:
+    0 0 0 6px #f5f7fa,
+    0 0 0 9px #333;
+
+  padding: 20px;
+
+  box-sizing: border-box;
+
+  overflow: visible;
+
+  flex-shrink: 0;
+
+  position: relative;
+  z-index: 1;
+}
+
+
+.twodivsgeneral span {
+  display: block;
+
+  text-align: justify;
+
+  line-height: 1.5;
+
+  overflow-wrap: break-word;
+}
+
+
+/* =========================
+   BOTÃO
+   ========================= */
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
+
+  align-items: center;
+
+  width: 100%;
+  max-width: 300px;
+
+  margin-top: 0;
+  margin-bottom: 40px;
+
+  position: relative;
+  z-index: 2;
+
+  transform: translateY(-80px);
+}
+
+
+.buttonPrimary {
+  width: 100%;
+
+  padding: 12px 20px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  font-size: 1rem;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s,
+    background-color 0.2s;
+
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  background-color: #007bff;
+
+  color: white;
+}
+
+
+.buttonPrimary:hover {
+  background-color: #0056b3;
+
+  transform: translateY(-2px);
+}
+
+
+/* =================================================
+   CELULAR
+   ================================================= */
+
+@media (max-width: 600px) {
+
+  .container {
+    min-height: 100vh;
+    height: auto;
+
+    padding-top: 20px;
+    padding-bottom: 60px;
+
+    overflow: visible;
+  }
+
+
+  /* =========================
+     TÍTULO
+     ========================= */
+
+  .title {
+    font-size: 2rem;
+
+    margin-top: 10px;
+    margin-bottom: 5px;
+
+    order: 1;
+  }
+
+
+  /* =========================
+     SUBTÍTULO
+     ========================= */
+
+  .title2 {
+    font-size: 0.85rem;
+
+    margin-bottom: 15px;
+
+    order: 2;
+  }
+
+
+  /* =================================================
+     IMPORTANTE:
+     "desmonta" os containers no mobile para que
+     os elementos possam ser ordenados individualmente
+     ================================================= */
+
+  .logos {
+    display: contents;
+  }
+
+
+  .logoArea {
+    display: contents;
+  }
+
+
+  /* =========================
+     LOGO NO MOBILE
+     ========================= */
+
+  .mainLogo {
+    width: 150px;
+    height: 150px;
+
+    transform: translateY(0);
+
+    order: 3;
+  }
+
+
+  /* =========================
+     BOTÃO NO MOBILE
+     ========================= */
+
+  .buttonContainer {
+    width: 90%;
+    max-width: 250px;
+
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+    transform: translateY(0);
+
+    order: 4;
+  }
+
+
+  /* =========================
+     CONTEÚDOS NO MOBILE
+     ========================= */
+
+  .twodivsgeneral {
+    display: block;
+
+    width: 90%;
+    max-width: 350px;
+
+    height: auto;
+
+    margin: 0;
+
+    padding: 15px;
+
+    font-size: 0.85rem;
+
+    line-height: 1.4;
+
+    text-align: justify;
+
+    background-color: #f5f7fa;
+
+    border: 3px solid #333;
+
+    box-shadow:
+      0 0 0 6px #f5f7fa,
+      0 0 0 9px #333;
+
+    box-sizing: border-box;
+
+    position: relative;
+  }
+
+
+  /* Conteúdo 1 */
+  .twodivsgeneral:nth-child(1) {
+    order: 5;
+  }
+
+
+  /* Conteúdo 2 */
+  .twodivsgeneral:nth-child(3) {
+    order: 6;
+  }
+
+
+  .twodivsgeneral span {
+    text-align: justify;
+
+    line-height: 1.4;
+
+    overflow-wrap: break-word;
+  }
+
+
+  /* =========================
+     LOGO PEQUENO
+     ========================= */
+
+  .smallLogo {
+    width: 40px;
+    height: 40px;
+
+    top: 20px;
+    left: 12px;
+  }
+}
+
+  .creators {
+  bottom: 30px;
+  padding: 0 10px;
+  box-sizing: border-box;
+
+  font-size: 0.65rem;
+  }
+
+
+/* =================================================
+   CELULARES MUITO PEQUENOS
+   ================================================= */
+
+@media (max-width: 400px) {
+
+  .title {
+    font-size: 1.7rem;
+  }
+
+
+  .title2 {
+    font-size: 0.75rem;
+  }
+
+
+  .mainLogo {
+    width: 130px;
+    height: 130px;
+  }
+
+
+  .buttonContainer {
+    width: 85%;
+  }
+
+
+  .twodivsgeneral {
+    width: 88%;
+
+    font-size: 0.8rem;
+
+    padding: 14px;
+  }
+
+
+  .smallLogo {
+    width: 35px;
+    height: 35px;
+  }
+
+  .creators {
+  bottom: 10px;
+  padding: 0 10px;
+  box-sizing: border-box;
+
+  font-size: 0.65rem;
+  }
+}
