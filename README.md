@@ -1,5 +1,12 @@
 # BentoGo
 O nosso projeto é um mapa interativo 3D da ETEC Bento Quirino. -------- 
-Percebemos que os pais dos alunos tinham dificuldades em se locomover pela bentotec,então fizemos esse site interativo para ajudá-los. -------- 
-O usuário pode explorar a escola, visualizar a localização dos espaços e projetos daBentotec e acompanhar sua própria posição utilizando o GPS do dispositivo, o site é construido a partir de jsx. -------- 
-Para desenvolver a aplicação também foram utilizadas tecnologias como React, React Router, Three.js, React Three Fiber, Drei, Geolocation API, CSS Modules e um modelo 3D da escola em formato GLB. -------- 
+Percebemos que os pais dos alunos tinham dificuldades em se locomover pela bentotec,então fizemos esse site interativo para ajudá-los.
+# Técnologias utilizadas
+O usuário pode explorar a escola, visualizar a localização dos espaços e projetos daBentotec e acompanhar sua própria posição utilizando o GPS do dispositivo, o site é construido a partir de jsx. 
+Para desenvolver a aplicação também foram utilizadas tecnologias como React, React Router, Three.js, React Three Fiber, Drei, Geolocation API, CSS Modules e um modelo 3D da escola em formato GLB.
+# Identidade visual
+Nossa Logotipo é um "BQ" com "GO" em baixo, sendo o "Q" um balão de localização. 
+Cinza claro → usado como fundo principal, dando neutralidade ao layout. 
+Vermelho e laranja → aplicados nas bordas, trazendo contraste e energia além de combinarem com as cores da ETEC Bento Quirino. 
+Azul → presente no botão “Começar”, para chamar a atenção da ação principal. 
+Preto e branco → utilizados nos textos e logotipo, garantindo legibilidade e equilíbrio. 
