@@ -10,3 +10,13 @@ Cinza claro → usado como fundo principal, dando neutralidade ao layout.
 Vermelho e laranja → aplicados nas bordas, trazendo contraste e energia além de combinarem com as cores da ETEC Bento Quirino. 
 Azul → presente no botão “Começar”, para chamar a atenção da ação principal. 
 Preto e branco → utilizados nos textos e logotipo, garantindo legibilidade e equilíbrio. 
+# Criadores e Responsabilidades
+Nathan Novais e Pedro de Souza Bragante
+<Br>
+Pedro → Home Page (Landing page)
+<Br>
+Nathan → Main Page (Mapa)
+<Br>
+Pedro → Info Page (Informação do projeto)
+<Br>
+Nathan → Settings Page (Configurações)
