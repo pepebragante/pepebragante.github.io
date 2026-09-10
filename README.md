@@ -1,5 +1,5 @@
 # BentoGo
-O nosso projeto é um mapa interativo 3D da ETEC Bento Quirino. -------- 
+O nosso projeto é um mapa interativo 3D da ETEC Bento Quirino. 
 Percebemos que os pais dos alunos tinham dificuldades em se locomover pela bentotec,então fizemos esse site interativo para ajudá-los.
 # Técnologias utilizadas
 O usuário pode explorar a escola, visualizar a localização dos espaços e projetos daBentotec e acompanhar sua própria posição utilizando o GPS do dispositivo, o site é construido a partir de jsx. 
@@ -21,7 +21,7 @@ Pedro → Info Page (Informação do projeto)
 <Br>
 Nathan → Settings Page (Configurações)
 # Link da Landing page
-Infelismente, pelo uso de jsx, você mesmo terá que começar um codespace, dapois de seguir as instruçoes saíra um link mais ou menos assim: https://<nome-do-codespace>-<hash>.github.dev
+Infelismente, pelo uso de jsx, você mesmo terá que começar um codespace, dapois de seguir as instruçoes saíra um link mais ou menos assim: https://(nome-do-codespace)-(hash).github.dev
 # Instruções
 
 cd AppReact
