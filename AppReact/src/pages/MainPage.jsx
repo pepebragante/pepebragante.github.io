@@ -13,7 +13,7 @@ import modelPath from "../assets/Bentao.glb";
 import PersonagemAnimado from "../assets/PersonagemAnimado"; 
  
 // Coordenadas GPS da entrada da escola, yayayayaya 
-// Usamos esse ponto real como o centro (0,0,0) do nosso mundo 3D. 
+// Usamos esse ponto real como o centro (0,0,0) do MEU  mundo 3D. hehehehheeh
 const ANCHOR_LAT = -22.9068;  
 const ANCHOR_LNG = -47.0616;  
  
