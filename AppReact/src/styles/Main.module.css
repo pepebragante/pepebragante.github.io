@@ -8,7 +8,6 @@
 
   background-color: #f5f7fa;
 
-  /* Moldura */
   border: 10px solid red;
   box-shadow: inset 0 0 0 15px orange;
 
@@ -17,11 +16,6 @@
   /* O mapa 3D não deve sair da tela */
   overflow: hidden;
 }
-
-
-/* =========================
-   TÍTULO
-   ========================= */
 
 .title {
   color: #333;
@@ -33,10 +27,6 @@
   font-size: 2.5rem;
 }
 
-
-/* =========================
-   BOTÕES
-   ========================= */
 
 .buttonContainer {
   display: flex;
@@ -51,11 +41,6 @@
 
   margin-top: 20px;
 }
-
-
-/* =========================
-   BOTÃO VOLTAR
-   ========================= */
 
 .containerVoltar {
   position: absolute;
@@ -95,10 +80,6 @@
 }
 
 
-/* =========================
-   CONFIGURAÇÕES
-   ========================= */
-
 .containerSettings {
   position: absolute;
 
@@ -108,10 +89,6 @@
   z-index: 1000;
 }
 
-
-/* =========================
-   BOTÃO SETTINGS
-   ========================= */
 
 .buttonSettings {
   background-color: transparent;
@@ -135,10 +112,6 @@
   transition: filter 0.2s ease;
 }
 
-
-/* =========================
-   BOTÃO INFO
-   ========================= */
 
 .containerInfo {
   position: absolute;
@@ -174,9 +147,7 @@
 }
 
 
-/* =========================
-   CELULAR
-   ========================= */
+/* celularthingmabobo */
 
 @media (max-width: 600px) {
 

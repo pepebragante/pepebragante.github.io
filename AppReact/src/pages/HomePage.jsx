@@ -22,14 +22,12 @@ export default function HomePage() {
   return (
     <div className={styles.container}>
 
-      {/* Logo pequeno */}
       <img
         src={logotipo}
         className={styles.smallLogo}
         alt="BentoGo"
       />
 
-      {/* Título, subtítulo e conteúdo principal */}
       <div className={styles.logos}>
 
         <h1 className={styles.title}>
@@ -40,7 +38,7 @@ export default function HomePage() {
           "Sempre siga em frente"
         </h3>
 
-        {/* Conteúdo 1 + Logo + Conteúdo 2 */}
+
         <div className={styles.logoArea}>
 
           <div className={styles.twodivsgeneral}>
@@ -64,7 +62,7 @@ export default function HomePage() {
             className={styles.mainLogo}
             alt="Logo Bento Quirino"
           />
-
+    
           <div className={styles.twodivsgeneral}>
             <span>
               O BentoGo é uma solução digital desenvolvida para facilitar a
@@ -86,7 +84,7 @@ export default function HomePage() {
       <div className={styles.creators}>
         Criadores: Nathan Novais e Pedro de Souza Bragante, caso erro ou duvidas digite para pepe.bragante@gmail.com 
       </div>
-      {/* Botão */}
+
       <div className={styles.buttonContainer}>
         <button
           className={styles.buttonPrimary}

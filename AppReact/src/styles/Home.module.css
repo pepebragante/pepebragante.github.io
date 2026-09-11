@@ -37,10 +37,6 @@
   z-index: 10000;
 }
 
-/* =========================
-   MOLDURA FIXA
-   ========================= */
-
 .container::before {
   content: "";
 
@@ -60,11 +56,6 @@
   z-index: 9999;
 }
 
-
-/* =========================
-   LOGO PEQUENO
-   ========================= */
-
 .smallLogo {
   width: 50px;
   height: 50px;
@@ -80,11 +71,6 @@
   z-index: 2;
 }
 
-
-/* =========================
-   ÁREA GERAL
-   ========================= */
-
 .logos {
   display: flex;
   flex-direction: column;
@@ -94,9 +80,6 @@
 }
 
 
-/* =========================
-   TÍTULO
-   ========================= */
 
 .title {
   color: #333;
@@ -111,11 +94,6 @@
   font-family: "DaysOne", sans-serif;
 }
 
-
-/* =========================
-   SUBTÍTULO
-   ========================= */
-
 .title2 {
   color: #333;
 
@@ -128,11 +106,6 @@
 
   font-family: "DaysOne", sans-serif;
 }
-
-
-/* =========================
-   LOGO + CONTEÚDOS
-   ========================= */
 
 .logoArea {
   display: flex;
@@ -148,11 +121,6 @@
   z-index: 1;
 }
 
-
-/* =========================
-   LOGO PRINCIPAL
-   ========================= */
-
 .mainLogo {
   width: 200px;
   height: 200px;
@@ -164,11 +132,6 @@
 
   transform: translateY(-100px);
 }
-
-
-/* =========================
-   CONTEÚDOS
-   ========================= */
 
 .twodivsgeneral {
   width: 350px;
@@ -221,11 +184,6 @@
 
   overflow-wrap: break-word;
 }
-
-
-/* =========================
-   BOTÃO
-   ========================= */
 
 .buttonContainer {
   display: flex;
@@ -281,11 +239,7 @@
   transform: translateY(-2px);
 }
 
-
-/* =================================================
-   CELULAR
-   ================================================= */
-
+/* celphon */
 @media (max-width: 600px) {
 
   .container {
@@ -298,11 +252,6 @@
     overflow: visible;
   }
 
-
-  /* =========================
-     TÍTULO
-     ========================= */
-
   .title {
     font-size: 2rem;
 
@@ -312,11 +261,6 @@
     order: 1;
   }
 
-
-  /* =========================
-     SUBTÍTULO
-     ========================= */
-
   .title2 {
     font-size: 0.85rem;
 
@@ -324,13 +268,6 @@
 
     order: 2;
   }
-
-
-  /* =================================================
-     IMPORTANTE:
-     "desmonta" os containers no mobile para que
-     os elementos possam ser ordenados individualmente
-     ================================================= */
 
   .logos {
     display: contents;
@@ -341,11 +278,6 @@
     display: contents;
   }
 
-
-  /* =========================
-     LOGO NO MOBILE
-     ========================= */
-
   .mainLogo {
     width: 150px;
     height: 150px;
@@ -354,11 +286,6 @@
 
     order: 3;
   }
-
-
-  /* =========================
-     BOTÃO NO MOBILE
-     ========================= */
 
   .buttonContainer {
     width: 90%;
@@ -371,11 +298,6 @@
 
     order: 4;
   }
-
-
-  /* =========================
-     CONTEÚDOS NO MOBILE
-     ========================= */
 
   .twodivsgeneral {
     display: block;
@@ -429,11 +351,6 @@
     overflow-wrap: break-word;
   }
 
-
-  /* =========================
-     LOGO PEQUENO
-     ========================= */
-
   .smallLogo {
     width: 40px;
     height: 40px;
@@ -451,11 +368,7 @@
   font-size: 0.65rem;
   }
 
-
-/* =================================================
-   CELULARES MUITO PEQUENOS
-   ================================================= */
-
+/* celular muito piquititico */
 @media (max-width: 400px) {
 
   .title {

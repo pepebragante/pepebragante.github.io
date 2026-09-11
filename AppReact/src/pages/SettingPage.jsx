@@ -15,7 +15,7 @@ export default function SettingPage() {
       <div className={styles.buttonContainer}>
         <button
           className={styles.buttonPrimary2}
-          //implementar modo escuro
+          //implementar modo escuro, bum
         >
           Modo Escuro
         </button>

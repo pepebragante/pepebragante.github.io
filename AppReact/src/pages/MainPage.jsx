@@ -12,12 +12,12 @@ import { useNavigate } from "react-router-dom";
 import modelPath from "../assets/Bentao.glb"; 
 import PersonagemAnimado from "../assets/PersonagemAnimado"; 
  
-// Coordenadas GPS da entrada da escola. 
+// Coordenadas GPS da entrada da escola, yayayayaya 
 // Usamos esse ponto real como o centro (0,0,0) do nosso mundo 3D. 
 const ANCHOR_LAT = -22.9068;  
 const ANCHOR_LNG = -47.0616;  
  
-// Converte a Latitude e Longitude do celular para coordenadas X, Y, Z em metros dentro do mapa 3D 
+// Converte a Latitude e Longitude do celular para coordenadas X, Y, Z em metros dentro do MEU mapa 3D hahahhahaaah 
 function latLngToVector3(lat, lng) { 
   const latRad = (ANCHOR_LAT * Math.PI) / 180; 
   const deltaLat = lat - ANCHOR_LAT; 
@@ -36,7 +36,7 @@ function CameraController({ targetPos, topView, mapCenter, mapSize }) {
  
   useFrame((state) => { 
     if (controlsRef.current) { 
-      // Posição onde o boneco está no chão (pés) 
+      // Posição onde o boneco está no chão (pés 🤤🤤🤤🤤) 
       const characterPos = new THREE.Vector3(targetPos.x, targetPos.y, targetPos.z); 
        
       // Visão de cima do mapa
@@ -55,20 +55,20 @@ function CameraController({ targetPos, topView, mapCenter, mapSize }) {
           largestDimension /
           (2 * Math.tan(fovRadians / 2));
 
-        // Adiciona uma margem para não cortar as bordas do mapa
+        // borda pra n cortar o mapa i guess
         cameraHeight *= 1.25;
 
-        // Impede que a câmera fique muito próxima do mapa
+        // impede camera muito alta
         cameraHeight = Math.max(cameraHeight, 50);
 
-        // Posiciona a câmera diretamente acima do centro do mapa
+        // posiciona a cam acima do mapa
         state.camera.position.set(
           center.x,
           center.y + cameraHeight,
           center.z
         );
 
-        // Faz a câmera olhar para o centro do mapa
+        // faz a cam olhar para o centro do mapa
         controlsRef.current.target.set(
           center.x,
           center.y,
@@ -78,7 +78,6 @@ function CameraController({ targetPos, topView, mapCenter, mapSize }) {
         controlsRef.current.minDistance = 1;
         controlsRef.current.maxDistance = cameraHeight * 3;
 
-        // Mantém a câmera olhando praticamente de cima
         controlsRef.current.minPolarAngle = 0;
         controlsRef.current.maxPolarAngle = 0.05;
 
