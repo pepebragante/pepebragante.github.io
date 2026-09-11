@@ -22,6 +22,9 @@ Pedro → Info Page (Informação do projeto)
 Nathan → Settings Page (Configurações)
 # Link da Landing page
 Infelizmente, pelo uso de jsx, você mesmo terá que começar um codespace, depois de seguir as instruções saíra um link mais ou menos assim: https://(nome-do-codespace)-(hash).github.dev
+<Br>
+<Br>
+https://github.com/pepebragante/pepebragante.github.io
 # Instruções
 
 cd AppReact
