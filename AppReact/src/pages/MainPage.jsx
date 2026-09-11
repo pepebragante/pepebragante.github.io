@@ -61,14 +61,12 @@ function CameraController({ targetPos, topView, mapCenter, mapSize }) {
         // impede camera muito alta
         cameraHeight = Math.max(cameraHeight, 50);
 
-        // posiciona a cam acima do mapa
         state.camera.position.set(
           center.x,
           center.y + cameraHeight,
           center.z
         );
 
-        // faz a cam olhar para o centro do mapa
         controlsRef.current.target.set(
           center.x,
           center.y,
@@ -84,29 +82,22 @@ function CameraController({ targetPos, topView, mapCenter, mapSize }) {
         return;
       }
 
-      // O ponto original do boneco fica nos pés. Para a câmera não olhar pro chão e cortar a cabeça, 
-      // criamos um ponto de foco elevando o alvo em +1.8 metros (altura do peito/cabeça). 
       const targetLookAt = new THREE.Vector3( 
         characterPos.x, 
         characterPos.y + 1.8,  
         characterPos.z 
       ); 
  
-      // Define a distância fixa da câmera em relação ao boneco: 
-      // Y = 3.2 (altura da visão) e Z = -4 (valor negativo posiciona a câmera atrás do boneco) 
       const cameraOffset = new THREE.Vector3(0, 3.2, -4);  
        
-      // Posiciona a câmera no espaço 3D acompanhando o deslocamento do personagem 
       state.camera.position.set( 
         characterPos.x + cameraOffset.x, 
         characterPos.y + cameraOffset.y, 
         characterPos.z + cameraOffset.z 
       ); 
        
-      // Aponta o foco do OrbitControls diretamente para a cabeça do personagem 
       controlsRef.current.target.copy(targetLookAt); 
 
-      // Restaura os limites normais da câmera
       controlsRef.current.minDistance = 1;
       controlsRef.current.maxDistance = 10;
       controlsRef.current.minPolarAngle = 0;
@@ -118,16 +109,15 @@ function CameraController({ targetPos, topView, mapCenter, mapSize }) {
     <OrbitControls 
       ref={controlsRef} 
       makeDefault 
-      enableZoom={true} // Permite aproximar ou afastar a visão com pinça/scroll 
-      enablePan={false} // Desativa o pan (arrastar) para o usuário não perder o boneco de vista no mapa 
-      maxPolarAngle={Math.PI / 2 - 0.05} // Impede que a câmera gire para debaixo do chão 
-      minDistance={1}   // Limite mínimo de aproximação 
-      maxDistance={10}  // Limite máximo de afastamento 
+      enableZoom={true}  
+      enablePan={false} 
+      maxPolarAngle={Math.PI / 2 - 0.05} 
+      minDistance={1}  
+      maxDistance={10}   
     /> 
   ); 
 } 
 
-// Componente responsável por mostrar onde o personagem está no mapa quando a visão ampla está ativada
 function PlayerMarker({ targetPos, topView }) {
   if (!topView) return null;
 
@@ -159,7 +149,6 @@ function PlayerMarker({ targetPos, topView }) {
           justifyContent: "center"
         }}
       >
-        {/* Animação de pulsação ao redor do marcador */}
         <div
           style={{
             position: "absolute",
@@ -200,7 +189,6 @@ function PlayerMarker({ targetPos, topView }) {
         </div>
       </div>
 
-      {/* Animação do círculo externo */}
       <style>
         {`
           @keyframes locationPulse {
@@ -225,7 +213,6 @@ function PlayerMarker({ targetPos, topView }) {
   );
 }
 
-// Componente que carrega e exibe o modelo 3D da escola (.glb) 
 function Modelo({ onBoundsReady }) { 
   const { scene } = useGLTF(modelPath); 
   const groupRef = useRef();
@@ -271,22 +258,17 @@ export default function MainPage() {
   const navigate = useNavigate(); 
   const [targetPos, setTargetPos] = useState(new THREE.Vector3(0, 0, 0)); 
 
-  // Define se a câmera está mostrando o mapa de cima
   const [topView, setTopView] = useState(false);
 
-  // Guarda o centro e o tamanho do mapa para calcular a visão de cima
   const [mapCenter, setMapCenter] = useState(new THREE.Vector3(0, 0, 0));
   const [mapSize, setMapSize] = useState(new THREE.Vector3(100, 0, 100));
  
-  // Hook que lê o sensor de GPS do dispositivo em tempo real 
   useEffect(() => { 
     if (!navigator.geolocation) return; 
  
-    // watchPosition escuta as atualizações de localização conforme a pessoa anda 
     const watchId = navigator.geolocation.watchPosition( 
       (position) => { 
         const { latitude, longitude } = position.coords; 
-        // Converte as coordenadas do mundo real para posições dentro do mapa 3D 
         const new3DPos = latLngToVector3(latitude, longitude); 
         setTargetPos(new3DPos); 
       }, 
@@ -294,11 +276,9 @@ export default function MainPage() {
       { enableHighAccuracy: true, maximumAge: 0, timeout: 10000 } 
     ); 
  
-    // Limpa o monitoramento do GPS ao fechar a tela para não gastar bateria 
     return () => navigator.geolocation.clearWatch(watchId); 
   }, []); 
 
-  // Recebe o centro e o tamanho do modelo para calcular automaticamente a visão de cima
   const handleBoundsReady = useCallback(({ center, size }) => {
     setMapCenter(center);
     setMapSize(size);
@@ -326,22 +306,17 @@ export default function MainPage() {
         </button>         
        </div> 
  
-       {/* Container onde a viewport 3D do WebGL é renderizada */} 
        <div style={{ position: 'absolute', top: '120px', left: '15px', width: 'calc(100% - 30px)', height: 'calc(100% - 135px)', zIndex: 0 }}> 
         <Canvas camera={{ position: [0, 3.2, -4], far: 10000 }}> 
           <ambientLight intensity={1.5} /> 
           <pointLight position={[10, 10, 10]} /> 
            
-          {/* Suspense exibe a mensagem de carregamento enquanto os arquivos 3D baixam */} 
           <Suspense fallback={<div style={{color: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%'}}>Carregando Mapa...</div>}> 
              
-            {/* Cenário da escola */} 
             <Modelo onBoundsReady={handleBoundsReady} /> 
  
-            {/* Boneco animado controlado pela posição do GPS */} 
             <PersonagemAnimado targetPosition={targetPos} /> 
              
-            {/* Sistema de câmera em terceira pessoa acompanhando o boneco */} 
             <CameraController 
               targetPos={targetPos}
               topView={topView}
@@ -349,7 +324,6 @@ export default function MainPage() {
               mapSize={mapSize}
             />
 
-            {/* Marcador que mostra a posição do personagem na visão ampla */}
             <PlayerMarker
               targetPos={targetPos}
               topView={topView}
@@ -358,7 +332,6 @@ export default function MainPage() {
           </Suspense> 
         </Canvas>   
 
-        {/* Botão para alternar entre a visão normal e a visão de cima */}
         <button
           onClick={() => setTopView((prev) => !prev)}
           aria-label={topView ? "Voltar para visão normal" : "Ver mapa de cima"}
@@ -393,5 +366,4 @@ export default function MainPage() {
   ); 
 } 
  
-// Carrega o arquivo do mapa em segundo plano para não travar a navegação 
 useGLTF.preload(modelPath);
