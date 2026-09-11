@@ -41,7 +41,7 @@ export default function HomePage() {
 
         <div className={styles.logoArea}>
 
-          <div className={styles.twodivsgeneral}>
+          <div className={styles.divtextos}>
             <span>
               Nosso projeto é um mapa interativo em 3D da Escola Técnica
               Estadual Bento Quirino, desenvolvido para facilitar a orientação
@@ -63,7 +63,7 @@ export default function HomePage() {
             alt="Logo Bento Quirino"
           />
     
-          <div className={styles.twodivsgeneral}>
+          <div className={styles.divtextos}>
             <span>
               O BentoGo é uma solução digital desenvolvida para facilitar a
               orientação dentro da Escola Técnica Estadual Bento Quirino. Por

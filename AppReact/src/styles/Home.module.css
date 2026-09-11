@@ -65,7 +65,7 @@
 
   position: absolute;
 
-  top: 20px;
+  top: 25px;
   left: 20px;
 
   z-index: 2;
@@ -133,7 +133,7 @@
   transform: translateY(-100px);
 }
 
-.twodivsgeneral {
+.divtextos {
   width: 350px;
 
   height: auto;

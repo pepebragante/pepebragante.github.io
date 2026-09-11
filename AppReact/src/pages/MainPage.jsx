@@ -176,7 +176,7 @@ function PlayerMarker({ targetPos, topView }) {
             justifyContent: "center"
           }}
         >
-          {/* Ponto branco no centro */}
+          {/* Ponto azul no centro */}
           <div
             style={{
               width: "20px",
