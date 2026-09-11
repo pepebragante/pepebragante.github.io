@@ -1,0 +1,19 @@
+{
+  "name": "BentoGO",
+  
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+
+  "remoteEnv": {
+    "CLOUDFLARE_TOKEN": "${localEnv:CLOUDFLARE_TOKEN}"
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-azuretools.vscode-docker"
+      ]
+    }
+  }
+}
