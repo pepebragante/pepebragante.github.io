@@ -175,7 +175,7 @@
 }
 
 
-.twodivsgeneral span {
+.divtextos span {
   display: block;
 
   text-align: justify;
@@ -299,7 +299,7 @@
     order: 4;
   }
 
-  .twodivsgeneral {
+  .divtextos {
     display: block;
 
     width: 90%;
@@ -332,18 +332,18 @@
 
 
   /* Conteúdo 1 */
-  .twodivsgeneral:nth-child(1) {
+  .divtextos:nth-child(1) {
     order: 5;
   }
 
 
   /* Conteúdo 2 */
-  .twodivsgeneral:nth-child(3) {
+  .divtextos:nth-child(3) {
     order: 6;
   }
 
 
-  .twodivsgeneral span {
+  .divtextos span {
     text-align: justify;
 
     line-height: 1.4;
@@ -355,8 +355,8 @@
     width: 40px;
     height: 40px;
 
-    top: 20px;
-    left: 12px;
+    top: 30px;
+    left: 22px;
   }
 }
 
@@ -392,7 +392,7 @@
   }
 
 
-  .twodivsgeneral {
+  .divtextos {
     width: 88%;
 
     font-size: 0.8rem;

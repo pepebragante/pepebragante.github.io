@@ -145,7 +145,20 @@
 
   transition: filter 0.2s ease;
 }
-
+.buttonTopo{
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 65px;
+  height: 65px;
+  padding: 8px;
+  border: none;
+  border-radius: 15px;
+  background-color: white;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
 
 /* celularthingmabobo */
 
@@ -184,5 +197,19 @@
   .containerSettings {
     right: 25px;
     top: 20px;
+  }
+  .buttonTopo{
+    position: absolute;
+    right: 20px;
+    bottom: 100px;
+    width: 65px;
+    height: 65px;
+    padding: 8px;
+    border: none;
+    border-radius: 15px;
+    background-color: white;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
   }
 }

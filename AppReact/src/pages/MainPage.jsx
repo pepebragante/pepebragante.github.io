@@ -332,23 +332,9 @@ export default function MainPage() {
           </Suspense> 
         </Canvas>   
 
-        <button
+        <button className={styles.buttonTopo}
           onClick={() => setTopView((prev) => !prev)}
           aria-label={topView ? "Voltar para visão normal" : "Ver mapa de cima"}
-          style={{
-            position: 'absolute',
-            right: '20px',
-            bottom: '20px',
-            width: '65px',
-            height: '65px',
-            padding: '8px',
-            border: 'none',
-            borderRadius: '15px',
-            backgroundColor: 'white',
-            cursor: 'pointer',
-            zIndex: 10,
-            boxShadow: '0 3px 10px rgba(0, 0, 0, 0.3)'
-          }}
         >
           <img
             src={mapa}
